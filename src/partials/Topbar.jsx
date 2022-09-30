@@ -127,13 +127,13 @@ export default function Topbar() {
                                 Profile
                             </a>
                         </Link>
-                        <Link to={"/book/list"}>
+                        {/* <Link to={"/user/dashboard"}>
                             <a className="dropdown-item">
                                 <i className="fas fa-book fa-sm fa-fw mr-2 text-gray-400">
                                 </i>
                                 Book List
                             </a>
-                        </Link>
+                        </Link> */}
 
                         <div className="dropdown-divider"></div>
                         <a className="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">

@@ -13,6 +13,16 @@ const menuList = [
         icon: "fa-home",
         link: "/admin/dashboard",
     },
+    {
+        title: "Form Book",
+        icon: "fa-book",
+        link: "/book/form",
+    },
+    {
+        title: "Book",
+        icon: "fa-book",
+        link: "/user/dashboard",
+    },
     // {
     //     title: "Book List",
     //     icon: "fa-book",

@@ -16,19 +16,21 @@ export default function UserDashboard() {
     }, [])
     return <>
         <div className="container">
-
-            <div class="card-deck">
-                {books.map(book =>
-                    <div class="card">
-
-                        <img class="card-img-top" src={buku} alt="Card image cap" />
-                        <div class="card-body" key={book.bookId}>
-                            <h5 class="card-title">{book.bookTitle}</h5>
-                            <p class="card-text">{book.categoryName}</p>
-                            <p class="card-text"><small class="text-muted">{book.bookYear}</small></p>
-                        </div>
+            <div className="row">
+                <div className="col-md-12">
+                    <div class="card-deck">
+                        {books.map(book =>
+                            <div class="card">
+                                <img class="card" src={buku} alt="" />
+                                <div class="card-body" key={book.bookId}>
+                                    <h5 class="card-title">{book.bookTitle}</h5>
+                                    <p class="card-text">{book.bookStatus === true ? "Tersedia" : "Dipinjam"}</p>
+                                    <p class="card-text"><small class="text-muted">{book.bookYear}</small></p>
+                                </div>
+                            </div>
+                        )}
                     </div>
-                )}
+                </div>
             </div>
             {/* <nav>
                 <Link to={"/book/list"}>

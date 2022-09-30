@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {BrowserRouter, Routes, Route, Navigate} from "react-router-dom";
+import {BrowserRouter, Routes, Route, Navigate, HashRouter} from "react-router-dom";
 
 import App from "./App";
 import UserList from "./pages/user/UserList.jsx";
@@ -21,10 +21,12 @@ import AuthorForm from "./pages/Author/AuthorForm";
 import PublisherList from "./pages/Publisher/PublisherList";
 import PublisherForm from "./pages/Publisher/PublisherForm";
 import DetailProfileUserBooks from "./pages/user/DetailProfileUserBooks";
+import BookForm from "./pages/book/BookForm";
+import BookList2 from "./pages/book/BookList2";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path="/">
                     <Route index element={<Navigate to={"/login"} replace/>}/>
@@ -51,7 +53,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
                         <Route path={"/user/dashboard"} element={<UserDashboard/>}/>
 
+                        <Route path={"/book/form"} element={<BookList2/>}/>
                         <Route path={"/book/list"} element={<BookList/>}/>
+                        <Route path={"/book/add"} element={<BookForm/>}/>
 
                         <Route path={"/admin/dashboard"} element={<AdminDashboard/>}/>
 
@@ -68,6 +72,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                     </Route>
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     </React.StrictMode>
 );
